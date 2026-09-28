@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 190" role="img" aria-labelledby="title description">
   <title id="title">Ubuntu Community Services</title>
-  <desc id="description">A green supporting hand, gold person and heart, with the Ubuntu Community Services wordmark and the tagline Empowering Person-Centred Care.</desc>
+  <desc id="description">A green supporting hand, gold person and heart, with the Ubuntu Community Services wordmark and the tagline Empowering Person-Centered Care.</desc>
   <g transform="translate(10 4) scale(.62)">
     <path fill="#f2a12d" d="M78 46c22-1 41 6 59 20 11-7 24-11 36-7 22 7 30 29 22 54-7 24-23 49-44 71 16-29 29-59 25-83-3-19-15-27-30-27-14 0-28 7-41 15-6 4-11 1-16-5-5-13-8-27-11-38Z"/>
     <path fill="#f2a12d" d="M79 46c-20-7-42-7-65-3 26-3 49 6 71 18Z"/>
@@ -10,5 +10,5 @@
   </g>
   <text x="190" y="98" fill="#06492c" font-family="Georgia, 'Times New Roman', serif" font-size="82">Ubuntu</text>
   <text x="194" y="128" fill="#06492c" font-family="Georgia, 'Times New Roman', serif" font-size="23" letter-spacing="6">COMMUNITY SERVICES</text>
-  <text x="194" y="164" fill="#e8951c" font-family="Arial, sans-serif" font-size="21">Empowering Person-Centred Care</text>
+  <text x="194" y="164" fill="#e8951c" font-family="Arial, sans-serif" font-size="21">Empowering Person-Centered Care</text>
 </svg>
