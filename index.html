@@ -45,8 +45,12 @@
 
     .site-header { position: relative; z-index: 5; background: var(--white); color: var(--forest); }
     .header-inner { display: flex; min-height: 92px; align-items: center; justify-content: space-between; gap: 2rem; border-bottom: 1px solid var(--line); }
-    .brand { display: inline-flex; align-items: center; color: var(--forest); text-decoration: none; }
-    .brand-logo { display: block; width: min(290px, 42vw); height: auto; }
+    .brand { display: inline-flex; flex: 0 0 auto; align-items: center; gap: .65rem; color: var(--forest); text-decoration: none; }
+    .brand-logo { display: block; width: auto; height: 78px; max-width: 180px; object-fit: contain; }
+    .brand-copy { display: grid; gap: .1rem; line-height: 1.05; }
+    .brand-copy strong { color: var(--forest); font-family: var(--serif); font-size: 1.1rem; }
+    .brand-services { color: var(--forest); font-size: .64rem; font-weight: 700; letter-spacing: .08em; }
+    .brand-copy small { color: var(--coral-dark); font-size: .6rem; font-weight: 700; white-space: nowrap; }
     .nav { display: flex; align-items: center; gap: clamp(1rem, 2vw, 2rem); }
     .nav a { color: var(--forest); font-size: .88rem; text-decoration: none; transition: color .2s ease; }
     .nav a:hover { color: var(--coral-dark); }
@@ -150,7 +154,7 @@
 
     .footer { padding: 2rem 0; background: #102c25; color: rgb(255 255 255 / 78%); }
     .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
-    .footer .brand-logo { width: 250px; padding: 5px 10px; background: var(--white); }
+    .footer .brand-logo { height: 84px; max-width: 150px; padding: 4px; background: var(--white); object-fit: contain; }
     .footer-links { display: flex; flex-wrap: wrap; gap: 1.4rem; }
     .footer-links a { color: rgb(255 255 255 / 78%); font-size: .82rem; text-decoration: none; }
     .footer-links a:hover { color: var(--lime); }
@@ -159,8 +163,12 @@
     .copyright { margin: 1.5rem 0 0; padding-top: 1.1rem; border-top: 1px solid rgb(255 255 255 / 18%); color: rgb(255 255 255 / 55%); font-size: .74rem; }
 
     @media (max-width: 850px) {
-      .header-inner { min-height: 76px; }
-      .brand-logo { width: min(250px, 65vw); }
+      .header-inner { min-height: 76px; gap: .7rem; }
+      .brand-logo { height: 56px; max-width: 64px; }
+      .brand-copy { max-width: 145px; }
+      .brand-copy strong { font-size: .9rem; }
+      .brand-services { font-size: .56rem; }
+      .brand-copy small { font-size: .52rem; }
       .menu-toggle { display: inline-grid; place-items: center; }
       .nav { position: absolute; top: 76px; right: 1.5rem; left: 1.5rem; display: none; align-items: stretch; gap: 0; padding: .5rem 1rem; background: var(--forest); box-shadow: 0 14px 25px rgb(0 0 0 / 20%); }
       .nav.is-open { display: flex; flex-direction: column; }
@@ -232,7 +240,8 @@
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="#top" aria-label="Ubuntu Community Services home">
-        <img class="brand-logo" src="ubuntu-logo.svg" alt="">
+        <img class="brand-logo" src="logologo.jpeg" alt="">
+        <span class="brand-copy"><strong>Ubuntu</strong><span class="brand-services">Community Services</span><small>Empowering Person-Centered Care</small></span>
       </a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation menu">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
@@ -413,7 +422,7 @@
     <div class="wrap">
       <div class="footer-inner">
         <a class="brand" href="index.html" aria-label="Ubuntu Community Services home">
-          <img class="brand-logo" src="ubuntu-logo.svg" alt="">
+          <img class="brand-logo" src="logologo.jpeg" alt="">
         </a>
         <nav class="footer-links" aria-label="Footer navigation">
           <a href="services.html">Services</a>
