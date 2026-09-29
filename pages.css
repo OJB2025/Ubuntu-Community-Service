@@ -58,7 +58,15 @@ button { font: inherit; }
 .text-split { display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(2.5rem, 7vw, 7rem); align-items: start; }
 .text-split p { margin: 0 0 1rem; color: var(--muted); }
 .story-quote { margin: 0; color: var(--forest); font-family: var(--serif); font-size: clamp(1.8rem, 3.2vw, 2.8rem); line-height: 1.25; }
-.value-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 2rem; }
+.mission-vision-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: clamp(1.5rem, 4vw, 3.5rem); margin-top: 2rem; }
+.purpose-item { padding-top: 1.25rem; border-top: 2px solid var(--forest); }
+.purpose-item h3 { margin: 0 0 .65rem; color: var(--forest); font-family: var(--display); font-size: 1.35rem; }
+.purpose-item p { margin: 0; color: var(--muted); }
+.trust-note { margin-top: 2rem; padding: 1.35rem 1.5rem; border-left: 3px solid var(--gold); background: var(--gold-pale); }
+.trust-note h3 { margin: 0 0 .35rem; color: var(--forest); font-family: var(--display); font-size: 1.15rem; }
+.trust-note p { margin: 0; color: #41574a; }
+.values-heading { margin-top: 3rem; }
+.value-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.5rem; }
 .value-item { padding: 1.4rem; border-top: 2px solid var(--gold); background: var(--white); color: var(--forest); font-family: var(--display); font-weight: 700; }
 .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem; margin-top: 2.5rem; }
 .service-card { overflow: hidden; background: var(--white); }
@@ -67,6 +75,12 @@ button { font: inherit; }
 .service-card .service-number { color: var(--gold-dark); font-size: .72rem; font-weight: 800; letter-spacing: .12em; }
 .service-card h2 { margin: .45rem 0 .6rem; color: var(--forest); font-family: var(--display); font-size: 1.35rem; line-height: 1.25; }
 .service-card p { margin: 0; color: var(--muted); font-size: .94rem; }
+.education-program { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(2rem, 6vw, 5rem); align-items: start; margin-top: 2.5rem; padding: clamp(1.5rem, 4vw, 3rem); background: #e9eee7; }
+.education-program h2 { margin: .75rem 0 1rem; color: var(--forest); font-family: var(--display); font-size: clamp(1.8rem, 3.4vw, 2.7rem); line-height: 1.12; }
+.education-program p { margin: 0 0 1rem; color: var(--muted); }
+.learning-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .55rem 1.5rem; margin: 1.5rem 0; padding: 0; list-style: none; }
+.learning-list li { display: flex; align-items: baseline; gap: .6rem; color: var(--forest); font-size: .9rem; font-weight: 600; }
+.learning-list li::before { width: .42rem; height: .42rem; flex: 0 0 .42rem; border-radius: 50%; background: var(--gold); content: ''; }
 .detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-top: 2rem; }
 .detail-item { padding: 1.5rem; border-top: 2px solid var(--forest); background: var(--white); }
 .detail-item h3 { margin: 0 0 .5rem; color: var(--forest); font-family: var(--display); }
@@ -112,6 +126,7 @@ button { font: inherit; }
 .invite-code { color: rgb(255 255 255 / 60%); font-size: .78rem; }
 .invite-code strong { color: var(--gold-pale); font-weight: 700; }
 .copyright { margin: 1.5rem 0 0; padding-top: 1.1rem; border-top: 1px solid rgb(255 255 255 / 18%); color: rgb(255 255 255 / 55%); font-size: .74rem; }
+.footer-slogan { margin: .35rem 0 0; color: var(--gold-pale); font-family: var(--display); font-size: .82rem; font-weight: 700; }
 @media (max-width: 850px) {
   .header-inner { min-height: 76px; gap: .7rem; }
   .brand-logo { height: 56px; max-width: 64px; }
@@ -125,8 +140,10 @@ button { font: inherit; }
   .nav a { padding: .85rem .35rem; border-bottom: 1px solid rgb(255 255 255 / 14%); color: rgb(255 255 255 / 90%); }
   .nav .nav-cta { margin: .7rem 0; border-color: rgb(255 255 255 / 60%); color: var(--white); text-align: center; }
   .text-split, .contact-layout { grid-template-columns: 1fr; gap: 1.5rem; }
+  .mission-vision-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
   .service-grid { grid-template-columns: 1fr 1fr; }
   .service-card:last-child { grid-column: 1 / -1; }
+  .education-program { grid-template-columns: 1fr; gap: 1rem; }
 }
 @media (max-width: 620px) {
   .wrap, .page-hero-content { width: min(100% - 2rem, 1200px); }
@@ -135,7 +152,9 @@ button { font: inherit; }
   .page-hero h1 { font-size: clamp(2.65rem, 12vw, 4rem); }
   .page-section { padding: 4rem 0; }
   .value-grid { grid-template-columns: 1fr 1fr; }
+  .mission-vision-grid { grid-template-columns: 1fr; }
   .service-grid, .detail-grid, .step-grid, .contact-options { grid-template-columns: 1fr; }
+  .learning-list { grid-template-columns: 1fr; gap: .4rem; }
   .service-card:last-child { grid-column: auto; }
   .service-card img { height: 220px; }
   .family-callout { grid-template-columns: 1fr; padding: 1.5rem; }
